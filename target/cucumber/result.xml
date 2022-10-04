@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="2.935">
+    <testcase classname="Ejemplo de request" name="Prueba Get al endpoint" time="1.389">
+        <system-out><![CDATA[Dado I send a Get request to the https://api.github.com URI.................passed
+Entonces I get a 200 status code............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ejemplo de request" name="Validar la cantidad de entradas de la respuesta" time="0.38">
+        <system-out><![CDATA[Dado I send a Get request to the https://jsonplaceholder.typicode.com URI...passed
+Entonces I validate there are 10 items on the /users endpoint...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ejemplo de request" name="Validar que un elemento se encuentra en la respuesta" time="0.476">
+        <system-out><![CDATA[Dado I send a Get request to the https://jsonplaceholder.typicode.com URI...passed
+Entonces I validate there are value: Bret in the response at /users endpoint.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ejemplo de request" name="Validar que un elemento se encuentra en la respuesta 2" time="0.314">
+        <system-out><![CDATA[Dado I send a Get request to the https://jsonplaceholder.typicode.com URI...passed
+Entonces I validate there are other value: Bret in the response at /users endpoint.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ejemplo de request" name="Validar que un elemento se encuentra en la respuesta 3" time="0.303">
+        <failure message="La calle Kattie Turnpike no pertenece a ningún usuario" type="java.lang.AssertionError"><![CDATA[Dado I send a Get request to the https://jsonplaceholder.typicode.com URI...passed
+Entonces I can validate the nested value: Kattie Turnpike  on the response at /users endpoint.failed
+
+StackTrace:
+java.lang.AssertionError: La calle Kattie Turnpike no pertenece a ningún usuario
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at steps.APITestSteps.i_can_validate_the_nested_value_kattie_turnpike_on_the_response_at_users_endpoint(APITestSteps.java:164)
+	at ✽.I can validate the nested value: Kattie Turnpike  on the response at /users endpoint(file:///Users/andres.vazquez/Documents/QAautomation/api-automation/src/main/resources/features/APITest.feature:25)
+]]></failure>
+    </testcase>
+</testsuite>
